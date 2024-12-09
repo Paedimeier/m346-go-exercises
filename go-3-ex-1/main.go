@@ -20,8 +20,33 @@ const (
 func outputWithZodiacSign(p Person) {
 	var zodiacSign rune = '?'
 
-	// TODO: Assign proper value to zodiacSign using if/else branching.
-	// NOTE: The runes are defined above as constants.
+	if p.Month == 1 {
+        zodiacSign = Capricornus
+    } else if p.Month == 2 {
+        zodiacSign = Aquarius
+    } else if p.Month == 3 {
+        zodiacSign = Pisces
+    } else if p.Month == 4 {
+        zodiacSign = Aries
+    } else if p.Month == 5 {
+        zodiacSign = Taurus
+    } else if p.Month == 6 {
+        zodiacSign = Gemini
+    } else if p.Month == 7 {
+        zodiacSign = Cancer
+    } else if p.Month == 8 {
+        zodiacSign = Leo
+    } else if p.Month == 9 {
+        zodiacSign = Virgo
+    } else if p.Month == 10 {
+        zodiacSign = Libra
+    } else if p.Month == 11 {
+        zodiacSign = Scorpius
+    } else if p.Month == 12 {
+        zodiacSign = Sagittarius
+    }
+
+
 
 	fmt.Printf("%s %s, born on %02d.%02d.%04d, has the zodiac sign %c.\n",
 		p.FirstName, p.LastName, p.Day, p.Month, p.Year, zodiacSign)
